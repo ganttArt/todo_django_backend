@@ -25,7 +25,7 @@ SECRET_KEY = 'ita(gximf5p9jb9*7@v%oz1sn%bldwwp%+c*(mb_2-4vtrtzc*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://todo-django-api-backend.herokuapp.com/', 'todo-django-api-backend.herokuapp.com/', 'todo-django-api-backend.herokuapp.com/api']
+ALLOWED_HOSTS = ['todo-django-api-backend.herokuapp.com/']
 
 
 # Application definition
@@ -121,8 +121,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 
